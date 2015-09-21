@@ -1,0 +1,8 @@
+<%= form_for :creatures, url: "/creatures", method: "post" do |f|%>
+
+
+Enter Name: <%= f.text_field :name, required :true%>
+Enter Description: <%=	f.text_field :description, required :true%>
+<%= f.submit "Save Creature"%>
+
+<%end%>
