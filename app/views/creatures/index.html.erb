@@ -1,6 +1,14 @@
-<% @creatures.each do |creature|%>
-<div>
-	<h3>Name:</h3> <%= creature.name%>
-	<h3>Description:</h3> <%= creature.description%>
-</div>
-<%end%>
+  <div>
+    <% @creatures.each do |creature| %>
+
+      
+            Name: <%= creature.name %> <br>
+            Description: <%=  creature.description %>
+          	<a href="/creatures/<%=creature.id%>">Creature's Page</a> 
+
+          	<%= button_to "Delete", creature, method: :delete %>
+
+       
+
+    <% end %>
+ </div>

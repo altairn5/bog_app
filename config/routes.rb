@@ -3,10 +3,23 @@ Rails.application.routes.draw do
   root to: 'creatures#index'
 
   #RESTful Routes
-  get '/creatures', to: 'creatures#index'
-  get '/creatures/new', to:'creatures#new'
+  get '/creatures', to: 'creatures#index', as: "creatures"
+  get '/creatures/new', to:'creatures#new', as: "new_creature"
+  #rake routes to check this route out
+  #Display One
+  get '/creatures/:id', to:'creatures#show', as: "creature"
+  #edit One
+  get '/creatures/:id/edit', to: 'creatures#show', as: "edit_creature"
+
+  #Post a new One
   post '/creatures', to:'creatures#create'
- # get "/creatures" => "creatures"
+  # get "/creatures" => "creatures"
+
+  # the update route
+  patch "/creatures/:id", to: "creatures#udpate"
+
+  # delete route
+  delete "/creatures/:id", to: "creatures#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
