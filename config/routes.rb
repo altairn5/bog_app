@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # get "/creatures" => "creatures"
 
   # the update route
-  patch "/creatures/:id", to: "creatures#udpate"
+  patch "/creatures/:id", to: "creatures#update"
 
   # delete route
   delete "/creatures/:id", to: "creatures#destroy"
