@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #Display One
   get '/creatures/:id', to:'creatures#show', as: "creature"
   #edit One
-  get '/creatures/:id/edit', to: 'creatures#show', as: "edit_creature"
+  get '/creatures/:id/edit', to: 'creatures#edit', as: "edit_creature"
 
   #Post a new One
   post '/creatures', to:'creatures#create'

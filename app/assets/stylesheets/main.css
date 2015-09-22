@@ -1,0 +1,10 @@
+/*.bck-image{
+	background-image: url("https://images.unsplash.com/photo-1416424495960-09ec216f50b3?q=80&fm=jpg&s=709eb0081fd1cc2498ea02dfc082119f");
+	/*wraps up image and in one solid image with no-repeat*/
+	background-size: cover;
+	background-repeat:no-repeat;
+
+}*/
+body{
+	color: white;
+}

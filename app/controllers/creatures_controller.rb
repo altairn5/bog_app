@@ -6,22 +6,23 @@ class CreaturesController < ApplicationController
         end
 
         def new
-        	@creatures = Creature.new
+        	@creature = Creature.new 
         	render :new
         end
 
         def show
         	id = params[:id]
-        	@creatures= Creature.find(id)
+        	@creature= Creature.find(id)
         	render :show
         end
         def edit
             id = params[:id]
-            @creatures= Creature.find(id)
-            render :edit
+            @creature= Creature.find(id)
+            render :new
         end
 
         def create
+          
         	new_creature = params.require(:creature).permit(:name, :description)
         	creature = Creature.create(new_creature)
             redirect_to "/creatures/#{creature.id}"
